@@ -244,6 +244,22 @@ public:
         cout << "Average Age: " << averageAge << "\n";
         cout << "---------------------------------\n";
     }
+    void displayPatientById(int id) {
+        Patient* patient = searchPatient(id);
+        if (patient != nullptr) {
+            cout << "Patient Details:\n";
+            cout << "---------------------------------\n";
+            cout << "ID: " << patient->id << "\n";
+            cout << "Name: " << patient->name << "\n";
+            cout << "Age: " << patient->age << "\n";
+            cout << "Contact: " << patient->contact << "\n";
+            cout << "Medical History: " << patient->medicalHistory << "\n";
+            cout << "---------------------------------\n";
+        } else {
+            cout << "Patient with ID " << id << " not found.\n";
+        }
+    }
 };
+
 
 #endif
